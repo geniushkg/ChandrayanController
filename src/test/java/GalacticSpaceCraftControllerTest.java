@@ -96,6 +96,21 @@ public class GalacticSpaceCraftControllerTest {
         assertEquals(Direction.Down, spacecraft.getFacingDirection());
     }
 
+    @Test
+    public void testFlow(){
+
+        Chandrayaan spacecraft = new Chandrayaan(0, 0, 0, Direction.N);
+        GalacticSpaceCraftController chandrayanController = new GalacticSpaceCraftController(spacecraft);
+
+        char[] commands = {'f', 'r', 'u', 'b', 'l'};
+        chandrayanController.executeCommands(commands);
+
+        assertEquals(0, spacecraft.getX());
+        assertEquals(1, spacecraft.getY());
+        assertEquals(-1, spacecraft.getZ());
+        assertEquals(Direction.N, spacecraft.getFacingDirection());
+    }
+
 
 
 }
