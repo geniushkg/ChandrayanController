@@ -43,4 +43,19 @@ public class Chandrayaan {
     public void setFacingDirection(Direction facingDirection) {
         this.facingDirection = facingDirection;
     }
+
+    public void moveForward() {
+        updateCordinates(1);
+    }
+
+    private void updateCordinates(int i) {
+        switch (getFacingDirection()){
+            case N : case S : y+=i;
+                break;
+            case E : case W : x+=i;
+                break;
+            case Up: case Down: z+=i;
+
+        }
+    }
 }

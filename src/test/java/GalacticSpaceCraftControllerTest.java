@@ -13,8 +13,12 @@ public class GalacticSpaceCraftControllerTest {
         Chandrayaan spacecraft = new Chandrayaan(0,0,0, Direction.E);
         GalacticSpaceCraftController chandrayanController = new GalacticSpaceCraftController(spacecraft);
 
-        char[] commands = {'f'};
-        chandrayanController.executeCommands(commands);
+        char[] forwardCommand = {'f'};
+        chandrayanController.executeCommands(forwardCommand);
         assertEquals(1, spacecraft.getX());
+
+        char[] backwardCommand = {'b'};
+        chandrayanController.executeCommands(backwardCommand);
+        assertEquals(0,spacecraft.getX());
     }
 }
