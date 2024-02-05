@@ -6,6 +6,9 @@ public class CommandExecutor {
             case 'f' :
                 spacecraft.moveForward();
                 break;
+            case 'b' :
+                spacecraft.moveBackward();
+                break;
 
 
         }

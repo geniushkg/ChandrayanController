@@ -48,6 +48,11 @@ public class Chandrayaan {
         updateCordinates(1);
     }
 
+
+    public void moveBackward() {
+        updateCordinates(-1);
+    }
+
     private void updateCordinates(int i) {
         switch (getFacingDirection()){
             case N : case S : y+=i;
@@ -58,4 +63,5 @@ public class Chandrayaan {
 
         }
     }
+
 }
