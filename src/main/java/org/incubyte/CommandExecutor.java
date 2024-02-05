@@ -19,6 +19,9 @@ public class CommandExecutor {
             case 'u':
                 spacecraft.turnUp();
                 break;
+            case 'd':
+                spacecraft.turnDown();
+                break;
             default:
                 break;
 
