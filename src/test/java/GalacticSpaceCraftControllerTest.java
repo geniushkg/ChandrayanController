@@ -3,6 +3,8 @@ import org.incubyte.Direction;
 import org.incubyte.GalacticSpaceCraftController;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class GalacticSpaceCraftControllerTest {
 
@@ -13,5 +15,7 @@ public class GalacticSpaceCraftControllerTest {
 
         char[] commands = {'f','r','u','b','l'};
         chandrayanController.executeCommands(commands);
+        assertEquals(0, spacecraft.getX());
+
     }
 }
