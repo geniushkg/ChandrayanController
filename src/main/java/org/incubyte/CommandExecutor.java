@@ -16,6 +16,11 @@ public class CommandExecutor {
                 spacecraft.turnRight();
                 break;
 
+            case 'u':
+                spacecraft.turnUp();
+                break;
+            default:
+                break;
 
         }
     }

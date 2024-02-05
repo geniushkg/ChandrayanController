@@ -76,5 +76,17 @@ public class GalacticSpaceCraftControllerTest {
         assertEquals(Direction.E,spacecraft.getFacingDirection());
     }
 
+    @Test
+    public void testTurnUp() {
+        Chandrayaan spacecraft = new Chandrayaan(0, 0, 0, Direction.E);
+        GalacticSpaceCraftController chandrayanController = new GalacticSpaceCraftController(spacecraft);
+
+        char[] turnUpCommand = {'u'};
+        chandrayanController.executeCommands(turnUpCommand);
+        assertEquals(Direction.Up, spacecraft.getFacingDirection());
+    }
+
+
+
 
 }

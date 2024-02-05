@@ -133,4 +133,8 @@ public class Chandrayaan {
         }
     }
 
+    public void turnUp() {
+        isVertical=true;
+        setFacingDirection(Up);
+    }
 }
