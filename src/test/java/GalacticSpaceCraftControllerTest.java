@@ -20,5 +20,9 @@ public class GalacticSpaceCraftControllerTest {
         char[] backwardCommand = {'b'};
         chandrayanController.executeCommands(backwardCommand);
         assertEquals(0,spacecraft.getX());
+
+        char[] turnLeftCommand ={'l'};
+        chandrayanController.executeCommands(turnLeftCommand);
+        assertEquals(Direction.S,spacecraft.getFacingDirection());
     }
 }
